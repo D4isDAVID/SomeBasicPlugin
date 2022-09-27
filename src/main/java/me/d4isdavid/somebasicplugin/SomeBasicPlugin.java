@@ -5,6 +5,7 @@ import me.d4isdavid.somebasicplugin.commands.MentionCommand;
 import me.d4isdavid.somebasicplugin.listeners.AsyncPlayerChatListener;
 import me.d4isdavid.somebasicplugin.listeners.CommandListener;
 import me.d4isdavid.somebasicplugin.listeners.PlayerJoinListener;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,13 +21,14 @@ public class SomeBasicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
         getServer().getPluginManager().registerEvents(new AsyncPlayerChatListener(), this);
 
-        PluginCommand coordinatesCommand = getServer().getPluginCommand("coordinates");
-        assert coordinatesCommand != null;
-        coordinatesCommand.setExecutor(new CoordinatesCommand());
+        prepareCommand("coordinates", new CoordinatesCommand());
+        prepareCommand("mention", new MentionCommand());
+    }
 
-        PluginCommand mentionCommand = getServer().getPluginCommand("mention");
-        assert mentionCommand != null;
-        mentionCommand.setExecutor(new MentionCommand());
+    private void prepareCommand(String name, CommandExecutor executor) {
+        PluginCommand command = getServer().getPluginCommand(name);
+        assert command != null;
+        command.setExecutor(executor);
     }
 
 }

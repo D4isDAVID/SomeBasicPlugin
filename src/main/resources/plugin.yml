@@ -6,7 +6,7 @@ api-version: 1.19
 author: D4isDAVID
 commands:
   coordinates:
-    description: Manage a list of coordinates.
+    description: Manage a private list of coordinates.
     aliases: coords
     usage: "Usage: /<command> [list|set|remove] <name>"
   mention:

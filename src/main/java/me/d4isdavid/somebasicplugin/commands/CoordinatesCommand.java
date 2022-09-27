@@ -42,7 +42,7 @@ public class CoordinatesCommand implements CommandExecutor, TabCompleter {
         FileConfiguration config = coordinatesConfig.get();
         if (action.equalsIgnoreCase("list")) {
             ConfigurationSection section = config.getConfigurationSection(player.getName());
-            StringBuilder str = new StringBuilder("&eCoordinate List &7-------------\n&r");
+            StringBuilder str = new StringBuilder("&ePrivate Coordinate List &7-------\n&r");
             if (section != null) {
                 Set<String> locations = section.getKeys(false);
                 for (String name : locations)

@@ -1,0 +1,14 @@
+main: me.d4isdavid.somebasicplugin.SomeBasicPlugin
+name: ${name}
+prefix: ${name}
+version: ${version}
+api-version: 1.19
+author: D4isDAVID
+commands:
+  coordinates:
+    description: Manage a list of coordinates.
+    aliases: coords
+    usage: "Usage: /<command> [list|set|remove] <name>"
+  mention:
+    description: Configure how you get mentioned in chat.
+    usage: "Usage: /<command> [ignore|sound|title|actionbar|chat] [true|false]"

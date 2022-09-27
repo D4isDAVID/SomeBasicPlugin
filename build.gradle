@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'me.d4isdavid'
+version '1.0-SNAPSHOT'
+description 'Some basic server plugin.'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+        content {
+            includeGroup 'org.spigotmc'
+        }
+    }
+}
+
+dependencies {
+    implementation 'org.spigotmc:spigot-api:1.19-R0.1-SNAPSHOT'
+}
+
+tasks.processResources {
+    expand(name: project.name, version: version, description: description)
+}

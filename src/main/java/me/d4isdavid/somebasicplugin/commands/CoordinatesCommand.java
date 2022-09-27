@@ -22,11 +22,13 @@ public class CoordinatesCommand implements CommandExecutor, TabCompleter {
     private final Config coordinatesConfig = Config.get("coordinates.yml");
 
     @Override
-    public boolean onCommand(final @NonNull CommandSender sender, final @NonNull Command command, final @NonNull String label, final @NonNull String[] args) {
+    public boolean onCommand(final @NonNull CommandSender sender, final @NonNull Command command, final @NonNull String label, @NonNull String[] args) {
         if (!(sender instanceof Player player))
             return true;
-        if (args.length == 0)
-            return false;
+        if (args.length == 0) {
+            args = new String[1];
+            args[0] = "list";
+        }
         String action = args[0];
         if (!action.equalsIgnoreCase("list")
                 && !action.equalsIgnoreCase("set")

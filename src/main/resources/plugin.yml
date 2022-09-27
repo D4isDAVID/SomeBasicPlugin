@@ -8,7 +8,7 @@ commands:
   coordinates:
     description: Manage a private list of coordinates.
     aliases: coords
-    usage: "Usage: /<command> [list|set|remove] <name>"
+    usage: "Usage: /<command> [list|set|remove|tp] <name>"
   mention:
     description: Configure how you get mentioned in chat.
     usage: "Usage: /<command> [ignore|sound|title|actionbar|chat] [true|false]"

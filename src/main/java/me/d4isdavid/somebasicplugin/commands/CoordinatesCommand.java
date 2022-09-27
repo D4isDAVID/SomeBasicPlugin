@@ -104,6 +104,7 @@ public class CoordinatesCommand implements CommandExecutor, TabCompleter {
                 list.add("set");
                 list.add("list");
                 list.add("remove");
+                list.add("tp");
             }
             case 2 -> {
                 if (!args[0].equalsIgnoreCase("remove")

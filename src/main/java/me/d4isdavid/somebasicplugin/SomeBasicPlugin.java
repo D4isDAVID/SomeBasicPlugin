@@ -2,6 +2,7 @@ package me.d4isdavid.somebasicplugin;
 
 import me.d4isdavid.somebasicplugin.commands.CoordinatesCommand;
 import me.d4isdavid.somebasicplugin.commands.MentionCommand;
+import me.d4isdavid.somebasicplugin.commands.WarpsCommand;
 import me.d4isdavid.somebasicplugin.listeners.AsyncPlayerChatListener;
 import me.d4isdavid.somebasicplugin.listeners.CommandListener;
 import me.d4isdavid.somebasicplugin.listeners.PlayerJoinListener;
@@ -20,6 +21,7 @@ public class SomeBasicPlugin extends JavaPlugin {
 
         prepareCommand("coordinates", new CoordinatesCommand());
         prepareCommand("mention", new MentionCommand());
+        prepareCommand("warps", new WarpsCommand());
     }
 
     private void prepareCommand(String name, CommandExecutor executor) {

@@ -12,3 +12,7 @@ commands:
   mention:
     description: Configure how you get mentioned in chat.
     usage: "Usage: /<command> [ignore|sound|title|actionbar|chat] [true|false]"
+  warp:
+    description: Manage a public list of warps.
+    aliases: warps
+    usage: "Usage: /<command> [list|set|remove|tp] <name>"

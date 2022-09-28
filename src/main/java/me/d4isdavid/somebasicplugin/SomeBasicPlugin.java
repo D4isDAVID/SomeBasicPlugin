@@ -14,9 +14,6 @@ public class SomeBasicPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        new Config("coordinates.yml");
-        new Config("mention.yml");
-
         getServer().getPluginManager().registerEvents(new CommandListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
         getServer().getPluginManager().registerEvents(new AsyncPlayerChatListener(), this);

@@ -16,6 +16,8 @@ public class Config {
     private FileConfiguration configuration;
 
     public static Config get(String fileName) {
+        if (!configMap.containsKey(fileName))
+            configMap.put(fileName, new Config(fileName));
         return configMap.get(fileName);
     }
 

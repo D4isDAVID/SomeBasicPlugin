@@ -38,7 +38,7 @@ public class CoordinatesCommand implements CommandExecutor, TabCompleter {
             return false;
         if (action.equalsIgnoreCase("reload")) {
             coordinatesConfig.reload();
-            player.sendMessage("&6Reloaded the config.");
+            player.sendMessage(t("&6Reloaded the config."));
             return true;
         }
         FileConfiguration config = coordinatesConfig.get();
